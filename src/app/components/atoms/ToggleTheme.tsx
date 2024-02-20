@@ -22,7 +22,7 @@ export const ToggleTheme = ({ setPalette }: ToggleProps) => {
 	const isDark = useTheme().palette.mode === 'dark';
 
 	return (
-		<IconButton onClick={toogleTheme}>
+		<IconButton onClick={toogleTheme} color='inherit'>
 			{isDark ? <DarkModeRounded /> : <LightModeRounded />}
 		</IconButton>
 	);

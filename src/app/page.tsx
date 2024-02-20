@@ -1,10 +1,11 @@
-import { Box, Typography } from '@mui/material';
+'use client';
+import { Typography } from '@mui/material';
+import { Parallax } from './components/atoms';
 
 export default function Home() {
 	return (
-		<Box>
-			<Typography>Hello, world!</Typography>
-			Hello, world!
-		</Box>
+		<Parallax>
+			<Typography variant='h1'>Hola mundo</Typography>
+		</Parallax>
 	);
 }
