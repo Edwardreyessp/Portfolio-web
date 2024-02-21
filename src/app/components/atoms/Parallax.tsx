@@ -14,8 +14,17 @@ export const Parallax = ({ children }: ParallaxProps) => {
 			className={`${styles.header} ${
 				isDark ? styles.headerDark : styles.headerLight
 			}`}
+			width='100vw'
+			height='100%'
+			pt={'58px'}
 		>
-			<div className={`${styles.innerHeader} ${styles.flex}`}>{children}</div>
+			<Box
+				width='100%'
+				height='100%'
+				className={`${styles.innerHeader} ${styles.flex}`}
+			>
+				{children}
+			</Box>
 			<div>
 				<svg
 					className={styles.waves}
