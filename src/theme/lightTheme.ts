@@ -14,7 +14,7 @@ declare module '@mui/material/styles' {
 export const lightTheme: PaletteOptions = {
 	mode: 'light',
 	primary: {
-		main: '#11CBD7',
+		main: '#ffa600',
 	},
 	secondary: {
 		main: '#FA4659',
