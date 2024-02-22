@@ -14,7 +14,7 @@ export const Parallax = ({ children }: ParallaxProps) => {
 			className={`${styles.header} ${
 				isDark ? styles.headerDark : styles.headerLight
 			}`}
-			width='100vw'
+			maxWidth='100vw'
 			height='100%'
 			pt={'58px'}
 		>

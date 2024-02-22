@@ -25,6 +25,6 @@ export const lightTheme: PaletteOptions = {
 	},
 	navbar: {
 		main: '#FFFFFF',
-		dark: '#11CBD7',
+		dark: '#29272A',
 	},
 };

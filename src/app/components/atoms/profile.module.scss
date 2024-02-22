@@ -1,0 +1,98 @@
+$s1w: 40vw;
+$s2w: 60vw;
+$s3w: 10vw;
+
+$background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+
+.container {
+	position: relative;
+	width: 80vw;
+	height: calc(80vw * 8 / 16);
+	margin: auto;
+	overflow: hidden;
+	box-shadow: 0 1.25em 1em -0.5em #0005;
+}
+
+.imageContainer {
+	width: 100%;
+	height: 100%;
+	background: $background;
+	display: flex;
+
+	.desc {
+		position: absolute;
+		top: 50%;
+		left: 70%;
+		transform: translate(-50%, -50%);
+		color: white;
+		z-index: 20;
+	}
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: 0% 50%;
+	transition: transform 1s;
+
+	.container:hover & {
+		transform: translateX(-3%);
+		transition-duration: 5s;
+	}
+}
+
+@keyframes move-x {
+	50% {
+		transform: translateX(var(--x1));
+	}
+	100% {
+		transform: translateX(var(--x2));
+	}
+}
+
+.s1,
+.s2,
+.s3 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	animation: gg 0.5s ease-out forwards;
+	pointer-events: none;
+
+	.container:hover & {
+		animation-name: move-x;
+	}
+}
+
+.s1 {
+	left: 100%;
+	z-index: 1;
+	width: $s1w;
+	background: #fff;
+	mix-blend-mode: difference;
+
+	--x1: -100vw;
+	--x2: -40vw;
+}
+
+.s2 {
+	z-index: 2;
+	width: calc($s2w * 2);
+	left: calc(100% + $s1w);
+	background: $background;
+
+	--x1: -100vw;
+	--x2: -85vw;
+}
+
+.s3 {
+	z-index: 2;
+	width: $s3w;
+	right: 100%;
+	background: $background;
+	animation-delay: 0.1s;
+
+	--x1: 0;
+	--x2: 8vw;
+}

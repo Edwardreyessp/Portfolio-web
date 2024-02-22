@@ -4,3 +4,4 @@ export * from './ToggleTheme';
 export * from './Parallax';
 export * from './CustomButton';
 export * from './Description';
+export * from './Profile';

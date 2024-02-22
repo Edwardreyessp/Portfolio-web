@@ -37,7 +37,7 @@ export const Navbar = ({ setPalette }: NavbarProps) => {
 				bgcolor={scrolled ? 'background.paper' : 'transparent'}
 				sx={{ transition: 'background-color 0.3s ease' }}
 				boxShadow={scrolled ? 2 : 0}
-				color='navbar.main'
+				color={scrolled ? 'navbar.dark' : 'navbar.main'}
 			>
 				<Box display={{ xs: 'none', md: 'flex' }} gap={3} alignItems='center'>
 					<CustomLink href='/' text='Home' />

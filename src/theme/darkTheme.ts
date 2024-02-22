@@ -11,6 +11,6 @@ export const darkTheme: PaletteOptions = {
 	},
 	navbar: {
 		main: '#FFFFFF',
-		dark: '#11CBD7',
+		dark: '#FFFFFF',
 	},
 };
