@@ -28,6 +28,10 @@ const MuiTheme = ({ children, palette }: MuiThemeProps) => {
 					fontSize: '32px',
 				},
 			},
+			body2: {
+				fontWeight: 600,
+				fontSize: '1.125rem',
+			},
 		},
 		palette,
 	});
