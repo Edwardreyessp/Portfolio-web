@@ -1,12 +1,25 @@
-import { Box } from '@mui/material';
+'use client';
+import { Box, useTheme } from '@mui/material';
 import { SVGProps } from 'react';
 import { IconSkill } from '../atoms';
 
 export const FrontendSkills = () => {
+	const isDark = useTheme().palette.mode === 'dark';
+
 	return (
-		<Box display='flex' gap={7} flexWrap='wrap' mt={4}>
+		<Box
+			display='flex'
+			gap={7}
+			alignItems='center'
+			justifyContent='center'
+			flexWrap='wrap'
+			mt={4}
+		>
 			<IconSkill text='React' icon={<IconReact />} />
-			<IconSkill text='NextJS' icon={<IconNextjs />} />
+			<IconSkill
+				text='NextJS'
+				icon={<IconNextjs fill={isDark ? 'white' : 'black'} />}
+			/>
 			<IconSkill text='TypeScript' icon={<IconTypescript />} />
 			<IconSkill text='Material UI' icon={<IconMaterialui />} />
 			<IconSkill text='Tailwind CSS' icon={<IconTailwindcss />} />
@@ -20,7 +33,14 @@ export const FrontendSkills = () => {
 
 export const BackendSkills = () => {
 	return (
-		<Box display='flex' gap={7} flexWrap='wrap' mt={4}>
+		<Box
+			display='flex'
+			gap={7}
+			flexWrap='wrap'
+			mt={4}
+			alignItems='center'
+			justifyContent='center'
+		>
 			<IconSkill text='NodeJS' icon={<IconNodejs />} />
 			<IconSkill text='MongoDB' icon={<IconMongodb />} />
 			<IconSkill text='PostgreSQl' icon={<IconPostgresql />} />
@@ -32,7 +52,14 @@ export const BackendSkills = () => {
 
 export const ToolsSkills = () => {
 	return (
-		<Box display='flex' gap={7} flexWrap='wrap' mt={4}>
+		<Box
+			display='flex'
+			gap={7}
+			flexWrap='wrap'
+			mt={4}
+			alignItems='center'
+			justifyContent='center'
+		>
 			<IconSkill text='Git' icon={<IconGit />} />
 			<IconSkill text='Github' icon={<IconGithub />} />
 			<IconSkill text='NPM' icon={<IconNpm />} />
@@ -45,7 +72,14 @@ export const ToolsSkills = () => {
 
 export const MobileSkills = () => {
 	return (
-		<Box display='flex' gap={7} flexWrap='wrap' mt={4}>
+		<Box
+			display='flex'
+			gap={7}
+			flexWrap='wrap'
+			mt={4}
+			alignItems='center'
+			justifyContent='center'
+		>
 			<IconSkill text='React Native' icon={<IconReact />} />
 			<IconSkill text='Flutter' icon={<IconFlutter />} />
 			<IconSkill text='Dart' icon={<IconDart />} />
@@ -56,7 +90,14 @@ export const MobileSkills = () => {
 
 export const SoftSkills = () => {
 	return (
-		<Box display='flex' gap={7} flexWrap='wrap' mt={4}>
+		<Box
+			display='flex'
+			gap={7}
+			flexWrap='wrap'
+			mt={4}
+			alignItems='center'
+			justifyContent='center'
+		>
 			<IconSkill text='Comunicación' icon={<IconCommunication />} />
 			<IconSkill text='Trabajo en equipo' icon={<IconTeamwork />} />
 			<IconSkill text='Resolución de problemas' icon={<IconResolve />} />

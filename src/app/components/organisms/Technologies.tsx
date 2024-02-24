@@ -39,14 +39,31 @@ export const Technologies = () => {
 			<Typography variant='h3' mb={4}>
 				Mi conocimiento
 			</Typography>
-			<Tabs value={tab} onChange={handleChange} aria-label='basic tabs example'>
+			<Tabs
+				value={tab}
+				onChange={handleChange}
+				scrollButtons='auto'
+				TabIndicatorProps={{ sx: { display: { xs: 'none', sm: 'block' } } }}
+				sx={{
+					'& .MuiTabs-flexContainer': {
+						flexWrap: 'wrap',
+					},
+				}}
+			>
 				<Tab label='FrontEnd' />
 				<Tab label='Backend' />
 				<Tab label='Tools' />
 				<Tab label='Mobile' />
 				<Tab label='Soft Skills' />
 			</Tabs>
-			<Box minHeight={{ xs: '166px', md: '166px' }}>{getTabContent()}</Box>
+			<Box
+				display='flex'
+				justifyContent='center'
+				alignItems='center'
+				minHeight={{ xs: '166px', md: '166px' }}
+			>
+				{getTabContent()}
+			</Box>
 		</Box>
 	);
 };

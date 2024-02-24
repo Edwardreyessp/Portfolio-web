@@ -7,17 +7,20 @@ import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 
 export const Profile = () => {
 	const isDark = useTheme().palette.mode === 'dark';
+	const isDesktop = useTheme().breakpoints.up('sm');
+
 	const devStyles: SxProps = {
 		background:
 			'linear-gradient(to right, #ffd700, #ffcb00, #ffbe00, #ffb200, #ffa600)',
 		WebkitBackgroundClip: 'text',
 		backgroundClip: 'text',
 		color: 'transparent',
-		display: 'inline',
+		display: 'inline-block',
 	};
 
 	const styleText: SxProps = {
-		display: 'inline',
+		display: 'inline-block',
+		mr: 1,
 	};
 
 	const backgroundStyle: SxProps = {
@@ -32,22 +35,25 @@ export const Profile = () => {
 				<Image className={styles.img} src={me} alt='Edward' priority />
 				<Stack spacing={2} className={styles.desc}>
 					<Box>
-						<Typography variant='h3' sx={styleText}>
-							Este soy yo,{' '}
+						<Typography sx={styleText} variant={isDesktop ? 'h3' : 'h3'}>
+							Este soy yo,
 						</Typography>
-						<Typography sx={devStyles} variant='h3'>
+						<Typography sx={devStyles} variant={isDesktop ? 'h3' : 'h3'}>
 							Edward
 						</Typography>
-						<Typography sx={styleText} variant='h3'>
+						<Typography sx={styleText} variant={isDesktop ? 'h3' : 'h3'}>
 							!
 						</Typography>
 					</Box>
-					<Typography>
+					<Typography sx={{ display: { xs: 'none', lg: 'block' } }}>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta
 						ullam alias molestias sit earum odio aut? Veritatis sunt harum ipsum
 						impedit laborum porro magnam voluptatem, itaque cumque nemo veniam.
 					</Typography>
-					<Box className={styles.social}>
+					<Box
+						sx={{ display: { xs: 'none', md: 'block' } }}
+						className={styles.social}
+					>
 						<Box className={styles.github}>
 							<GitHub className={styles.icon} />
 						</Box>

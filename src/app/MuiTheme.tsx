@@ -4,6 +4,7 @@ import {
 	PaletteOptions,
 	ThemeProvider,
 	createTheme,
+	useTheme,
 } from '@mui/material';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Inter } from 'next/font/google';
@@ -24,8 +25,11 @@ const MuiTheme = ({ children, palette }: MuiThemeProps) => {
 			},
 			h3: {
 				fontWeight: 700,
-				'@media (max-width: 600px)': {
-					fontSize: '32px',
+				[useTheme().breakpoints.down('lg')]: {
+					fontSize: '2rem',
+				},
+				[useTheme().breakpoints.down('sm')]: {
+					fontSize: '1.3rem',
 				},
 			},
 			body2: {

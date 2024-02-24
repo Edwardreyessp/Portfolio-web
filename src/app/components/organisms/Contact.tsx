@@ -35,7 +35,7 @@ export const Contact = () => {
 				<Stack
 					spacing={2}
 					width='100%'
-					maxWidth={{ xs: '80%', md: '50%' }}
+					maxWidth={{ xs: '100%', md: '50%' }}
 					alignItems='center'
 				>
 					<TextField label='Nombre' fullWidth variant='outlined' />
