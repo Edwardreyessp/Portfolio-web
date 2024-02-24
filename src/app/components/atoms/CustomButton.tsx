@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 export const CustomButton = () => {
 	return (
 		<Box>
-			<Link href='/' className={styles.cta}>
+			<Link href='#projects' className={styles.cta}>
 				<span>Mis proyectos</span>
 				<svg width='13px' height='10px' viewBox='0 0 13 10'>
 					<path d='M1,5 L11,5'></path>

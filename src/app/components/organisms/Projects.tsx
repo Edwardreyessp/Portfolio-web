@@ -21,7 +21,7 @@ export const Projects = () => {
 	};
 
 	return (
-		<Box id='projects'>
+		<Box>
 			<Box paddingX={{ xs: 5, md: 15 }}>
 				<Typography variant='body2' color='primary'>
 					Proyectos

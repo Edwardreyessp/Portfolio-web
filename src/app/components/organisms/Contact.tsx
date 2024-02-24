@@ -1,10 +1,11 @@
 import { GitHub, Instagram, LinkedIn, WhatsApp } from '@mui/icons-material';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import styles from '../atoms/SocialIcon.module.scss';
+import Link from 'next/link';
 
 export const Contact = () => {
 	return (
-		<Box paddingX={{ xs: 5, md: 15 }}>
+		<Box id='contact' paddingX={{ xs: 5, md: 15 }}>
 			<Typography variant='body2' color='primary'>
 				Contacto
 			</Typography>
@@ -15,18 +16,38 @@ export const Contact = () => {
 				<Typography variant='body2'>Mis redes sociales</Typography>
 				<Box className={styles.container}>
 					<Box className={styles.social}>
-						<Box className={styles.github}>
+						<Link
+							href='https://github.com/Edwardreyessp'
+							rel='noopener noreferrer'
+							target='_blank'
+							className={styles.github}
+						>
 							<GitHub className={styles.icon} />
-						</Box>
-						<Box className={styles.instagram}>
+						</Link>
+						<Link
+							href='https://www.instagram.com/edwardreyessp/'
+							rel='noopener noreferrer'
+							target='_blank'
+							className={styles.instagram}
+						>
 							<Instagram className={styles.icon} />
-						</Box>
-						<Box className={styles.linkedin}>
+						</Link>
+						<Link
+							href='https://www.linkedin.com/in/edwardreyessp'
+							rel='noopener noreferrer'
+							target='_blank'
+							className={styles.linkedin}
+						>
 							<LinkedIn className={styles.icon} />
-						</Box>
-						<Box className={styles.whatsapp}>
+						</Link>
+						<Link
+							href='https://web.whatsapp.com/send/?phone=5587096479&text&type=phone_number&app_absent=0'
+							rel='noopener noreferrer'
+							target='_blank'
+							className={styles.whatsapp}
+						>
 							<WhatsApp className={styles.icon} />
-						</Box>
+						</Link>
 					</Box>
 				</Box>
 				<Typography variant='body2' mt={10}>

@@ -13,9 +13,10 @@ export default function Home() {
 	return (
 		<Box>
 			<Header />
-			<Stack spacing={6} mt={6}>
+			<Stack spacing={8} mt={6}>
+				<Divider id='about' sx={{ opacity: 0 }} />
 				<About />
-				<Divider />
+				<Divider id='projects' />
 				<Projects />
 				<Divider />
 				<Technologies />

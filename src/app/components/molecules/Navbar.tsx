@@ -25,7 +25,7 @@ export const Navbar = ({ setPalette }: NavbarProps) => {
 	}, [scrolled]);
 
 	return (
-		<Box position='fixed' top={0} zIndex={20}>
+		<Box id='home' position='fixed' top={0} zIndex={20}>
 			<Box
 				display='flex'
 				alignItems='center'
@@ -40,9 +40,9 @@ export const Navbar = ({ setPalette }: NavbarProps) => {
 				color={scrolled ? 'navbar.dark' : 'navbar.main'}
 			>
 				<Box display={{ xs: 'none', md: 'flex' }} gap={3} alignItems='center'>
-					<CustomLink href='/' text='Home' />
-					<CustomLink href='/about' text='About' />
-					<CustomLink href='/contact' text='Contact' />
+					<CustomLink href='#home' text='Home' />
+					<CustomLink href='#about' text='Sobre mí' />
+					<CustomLink href='#contact' text='Contacto' />
 				</Box>
 				<ToggleTheme setPalette={setPalette} />
 			</Box>

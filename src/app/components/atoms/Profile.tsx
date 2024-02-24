@@ -4,6 +4,7 @@ import styles from './profile.module.scss';
 import me from '../../../../public/images/anime.png';
 import { Box, type SxProps, Typography, Stack, useTheme } from '@mui/material';
 import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
+import Link from 'next/link';
 
 export const Profile = () => {
 	const isDark = useTheme().palette.mode === 'dark';
@@ -51,15 +52,30 @@ export const Profile = () => {
 						sx={{ display: { xs: 'none', md: 'block' } }}
 						className={styles.social}
 					>
-						<Box className={styles.github}>
+						<Link
+							href='https://github.com/Edwardreyessp'
+							rel='noopener noreferrer'
+							target='_blank'
+							className={styles.github}
+						>
 							<GitHub className={styles.icon} />
-						</Box>
-						<Box className={styles.instagram}>
+						</Link>
+						<Link
+							href='https://www.instagram.com/edwardreyessp/'
+							rel='noopener noreferrer'
+							target='_blank'
+							className={styles.instagram}
+						>
 							<Instagram className={styles.icon} />
-						</Box>
-						<Box className={styles.linkedin}>
+						</Link>
+						<Link
+							href='http://www.linkedin.com/in/edwardreyessp'
+							rel='noopener noreferrer'
+							target='_blank'
+							className={styles.linkedin}
+						>
 							<LinkedIn className={styles.icon} />
-						</Box>
+						</Link>
 					</Box>
 				</Stack>
 			</Box>
