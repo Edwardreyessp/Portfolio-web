@@ -1,6 +1,7 @@
 import { Box, Divider, Stack } from '@mui/material';
 import {
 	About,
+	Contact,
 	Header,
 	Projects,
 	Technologies,
@@ -20,6 +21,7 @@ export default function Home() {
 				<Divider />
 				<Trajectory />
 				<Divider />
+				<Contact />
 			</Stack>
 		</Box>
 	);
