@@ -1,11 +1,11 @@
 import { Box, type SxProps, Typography } from '@mui/material';
 import styles from './name.module.scss';
-import meImage from '../../../../public/images/setup.jpg';
+import Edward from '../../../../public/images/download.webp';
 
 export const Name = () => {
 	const textStyle: SxProps = {
 		'&::after': {
-			backgroundImage: `url(${meImage.src})`,
+			backgroundImage: `url(${Edward.src})`,
 		},
 		'&:hover::after': {
 			top: { xs: '0rem', md: '-10rem' },

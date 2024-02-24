@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import styles from './profile.module.scss';
-import me from '../../../../public/images/anime.png';
+import me from '../../../../public/images/Yo6.webp';
 import { Box, type SxProps, Typography, Stack, useTheme } from '@mui/material';
 import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 import Link from 'next/link';
