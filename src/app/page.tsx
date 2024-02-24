@@ -7,12 +7,13 @@ import {
 	Technologies,
 	Trajectory,
 } from './components/organisms';
+import { Footer } from './components/molecules';
 
 export default function Home() {
 	return (
 		<Box>
 			<Header />
-			<Stack spacing={6} marginY={6}>
+			<Stack spacing={6} mt={6}>
 				<About />
 				<Divider />
 				<Projects />
@@ -22,7 +23,9 @@ export default function Home() {
 				<Trajectory />
 				<Divider />
 				<Contact />
+				<Divider />
 			</Stack>
+			<Footer />
 		</Box>
 	);
 }
