@@ -39,10 +39,7 @@ export const Profile = () => {
 							Este soy yo,
 						</Typography>
 						<Typography sx={devStyles} variant={isDesktop ? 'h3' : 'h3'}>
-							Edward
-						</Typography>
-						<Typography sx={styleText} variant={isDesktop ? 'h3' : 'h3'}>
-							!
+							Edward!
 						</Typography>
 					</Box>
 					<Typography sx={{ display: { xs: 'none', lg: 'block' } }}>

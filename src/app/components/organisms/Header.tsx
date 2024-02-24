@@ -1,7 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import { Parallax, Name, CustomButton, Description } from '../atoms';
 import Image from 'next/image';
-import setup from '../../../../public/images/setup.png';
+import setup from '../../../../public/images/setup3.png';
 
 export const Header = () => {
 	return (
@@ -24,12 +24,14 @@ export const Header = () => {
 					<Description />
 					<CustomButton />
 				</Stack>
-				<Image
-					priority
-					src={setup}
-					alt='Edward'
-					style={{ maxWidth: '90vw', maxHeight: '90vw' }}
-				/>
+				<Box pt={{ xs: 8, sm: 0 }}>
+					<Image
+						priority
+						src={setup}
+						alt='Edward'
+						style={{ maxWidth: '50vw', maxHeight: '50vw' }}
+					/>
+				</Box>
 			</Box>
 		</Parallax>
 	);

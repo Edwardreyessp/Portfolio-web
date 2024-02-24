@@ -1,9 +1,21 @@
 import styles from './ProjectCard.module.scss';
-import project from '../../../../public/images/anime.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { Box, type SxProps, Typography } from '@mui/material';
+import Link from 'next/link';
 
-export const ProjectCard = () => {
+interface ProjectCardProps {
+	image: StaticImageData;
+	title: string;
+	description: string;
+	link?: string;
+}
+
+export const ProjectCard = ({
+	image,
+	title,
+	description,
+	link,
+}: ProjectCardProps) => {
 	const cardStyle: SxProps = {
 		width: { xs: '250px', md: '400px' },
 		height: { xs: '250px', md: '400px' },
@@ -17,17 +29,36 @@ export const ProjectCard = () => {
 		height: { xs: '100px', md: 0 },
 	};
 
+	if (link) {
+		return (
+			<Link href={link} rel='noopener noreferrer' target='_blank'>
+				<Box sx={cardStyle} className={styles.card}>
+					<Image
+						src={image}
+						alt='project'
+						priority
+						style={{ width: '100%', height: '100%' }}
+					/>
+					<Box sx={contentStyle} className={styles.content}>
+						<Typography variant='body2'>{title}</Typography>
+						<Typography>{description}</Typography>
+					</Box>
+				</Box>
+			</Link>
+		);
+	}
+
 	return (
 		<Box sx={cardStyle} className={styles.card}>
 			<Image
-				src={project}
+				src={image}
 				alt='project'
 				priority
 				style={{ width: '100%', height: '100%' }}
 			/>
 			<Box sx={contentStyle} className={styles.content}>
-				<Typography variant='body2'>Nombre del Proyecto</Typography>
-				<Typography>Proyecto 1</Typography>
+				<Typography variant='body2'>{title}</Typography>
+				<Typography>{description}</Typography>
 			</Box>
 		</Box>
 	);
