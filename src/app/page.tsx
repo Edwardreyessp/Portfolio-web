@@ -1,5 +1,11 @@
 import { Box, Divider, Stack } from '@mui/material';
-import { About, Header, Projects, Technologies } from './components/organisms';
+import {
+	About,
+	Header,
+	Projects,
+	Technologies,
+	Trajectory,
+} from './components/organisms';
 
 export default function Home() {
 	return (
@@ -11,6 +17,8 @@ export default function Home() {
 				<Projects />
 				<Divider />
 				<Technologies />
+				<Divider />
+				<Trajectory />
 				<Divider />
 			</Stack>
 		</Box>
