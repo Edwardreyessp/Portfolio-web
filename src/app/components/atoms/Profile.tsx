@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './profile.module.scss';
 import me from '../../../../public/images/anime.png';
 import { Box, type SxProps, Typography, Stack, useTheme } from '@mui/material';
+import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 
 export const Profile = () => {
 	const isDark = useTheme().palette.mode === 'dark';
@@ -46,11 +47,22 @@ export const Profile = () => {
 						ullam alias molestias sit earum odio aut? Veritatis sunt harum ipsum
 						impedit laborum porro magnam voluptatem, itaque cumque nemo veniam.
 					</Typography>
+					<Box className={styles.social}>
+						<Box className={styles.github}>
+							<GitHub className={styles.icon} />
+						</Box>
+						<Box className={styles.instagram}>
+							<Instagram className={styles.icon} />
+						</Box>
+						<Box className={styles.linkedin}>
+							<LinkedIn className={styles.icon} />
+						</Box>
+					</Box>
 				</Stack>
 			</Box>
-			<Box className={styles.s1}></Box>
-			<Box sx={backgroundStyle} className={styles.s2}></Box>
-			<Box sx={backgroundStyle} className={styles.s3}></Box>
+			<Box className={styles.s1} />
+			<Box sx={backgroundStyle} className={styles.s2} />
+			<Box sx={backgroundStyle} className={styles.s3} />
 		</Box>
 	);
 };
