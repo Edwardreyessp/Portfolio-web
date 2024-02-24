@@ -12,9 +12,9 @@ export const About = () => {
 				Me presento
 			</Typography>
 			<Typography sx={{ display: { xs: 'block', lg: 'none' } }} mb={4}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta ullam
-				alias molestias sit earum odio aut? Veritatis sunt harum ipsum impedit
-				laborum porro magnam voluptatem, itaque cumque nemo veniam.
+				Soy un desarrollador apasionado especializado en software web y móvil.
+				Me encanta aprender y desafiarme constantemente. Fuera del trabajo,
+				disfruto de la música, los videojuegos y la tecnología.
 			</Typography>
 			<Profile />
 		</Box>
