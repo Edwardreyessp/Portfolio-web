@@ -57,6 +57,8 @@ export const BackendSkills = () => {
 };
 
 export const ToolsSkills = () => {
+	const isDark = useTheme().palette.mode === 'dark';
+
 	return (
 		<Box
 			display='flex'
@@ -67,13 +69,19 @@ export const ToolsSkills = () => {
 			justifyContent='center'
 		>
 			<IconSkill text='Git' icon={<IconGit />} />
-			<IconSkill text='Github' icon={<IconGithub />} />
+			<IconSkill
+				text='Github'
+				icon={<IconGithub fill={isDark ? 'white' : 'black'} />}
+			/>
 			<IconSkill text='NPM' icon={<IconNpm />} />
 			<IconSkill text='Yarn' icon={<IconYarn />} />
 			<IconSkill text='Figma/FigJam' icon={<IconFigma />} />
 			<IconSkill text='VSCode' icon={<IconVscode />} />
 			<IconSkill text='Jira' icon={<IconJira />} />
-			<IconSkill text='Miro' icon={<IconMiro />} />
+			<IconSkill
+				text='Miro'
+				icon={<IconMiro fill={isDark ? 'white' : 'black'} />}
+			/>
 		</Box>
 	);
 };
@@ -97,6 +105,8 @@ export const MobileSkills = () => {
 };
 
 export const SoftSkills = () => {
+	const isDark = useTheme().palette.mode === 'dark';
+
 	return (
 		<Box
 			display='flex'
@@ -106,11 +116,20 @@ export const SoftSkills = () => {
 			alignItems='center'
 			justifyContent='center'
 		>
-			<IconSkill text='Comunicación' icon={<IconCommunication />} />
-			<IconSkill text='Trabajo en equipo' icon={<IconTeamwork />} />
+			<IconSkill
+				text='Comunicación'
+				icon={<IconCommunication fill={isDark ? 'white' : 'black'} />}
+			/>
+			<IconSkill
+				text='Trabajo en equipo'
+				icon={<IconTeamwork fill={isDark ? 'white' : 'black'} />}
+			/>
 			<IconSkill text='Resolución de problemas' icon={<IconResolve />} />
 			<IconSkill text='Proactividad' icon={<IconStar />} />
-			<IconSkill text='Ética' icon={<IconEthic />} />
+			<IconSkill
+				text='Ética'
+				icon={<IconEthic fill={isDark ? 'white' : 'black'} />}
+			/>
 		</Box>
 	);
 };
@@ -494,7 +513,7 @@ export function IconGithub(props: SVGProps<SVGSVGElement>) {
 			{...props}
 		>
 			<path
-				fill='black'
+				fill={props.fill ?? 'black'}
 				d='M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2'
 			></path>
 		</svg>
@@ -823,7 +842,7 @@ export function IconCommunication(props: SVGProps<SVGSVGElement>) {
 			{...props}
 		>
 			<path
-				fill='black'
+				fill={props.fill ?? 'black'}
 				fillRule='evenodd'
 				d='M18.5 6C10.492 6 4 12.492 4 20.5C4 38.5 28 42 28 42v-7h1.5C37.508 35 44 28.508 44 20.5S37.508 6 29.5 6zM24 23.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5M34.5 21a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0M16 23.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5'
 				clipRule='evenodd'
@@ -842,7 +861,7 @@ export function IconTeamwork(props: SVGProps<SVGSVGElement>) {
 			{...props}
 		>
 			<path
-				fill='black'
+				fill={props.fill ?? 'black'}
 				d='M12 10a4 4 0 1 0 0-8a4 4 0 0 0 0 8m-6.5 3a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5M21 10.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m-9 .5a5 5 0 0 1 5 5v6H7v-6a5 5 0 0 1 5-5m-7 5c0-.693.1-1.362.288-1.994l-.17.014A3.5 3.5 0 0 0 2 17.5V22h3zm17 6v-4.5a3.5 3.5 0 0 0-3.288-3.494c.187.632.288 1.301.288 1.994v6z'
 			></path>
 		</svg>
@@ -871,7 +890,11 @@ export function IconEthic(props: SVGProps<SVGSVGElement>) {
 					</g>
 				</mask>
 			</defs>
-			<path fill='black' d='M0 0h48v48H0z' mask='url(#ipSFeelgoodOne0)'></path>
+			<path
+				fill={props.fill ?? 'black'}
+				d='M0 0h48v48H0z'
+				mask='url(#ipSFeelgoodOne0)'
+			></path>
 		</svg>
 	);
 }
@@ -997,22 +1020,22 @@ export function IconMiro(props: SVGProps<SVGSVGElement>) {
 			{...props}
 		>
 			<path
-				fill='black'
-				stroke='black'
+				fill={props.fill ?? 'black'}
+				stroke={props.fill ?? 'black'}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 				d='M5.5 5.5h5.322l10.58 10.205L11.072 42.5H5.5l5.071-24.354z'
 			></path>
 			<path
-				fill='black'
-				stroke='black'
+				fill={props.fill ?? 'black'}
+				stroke={props.fill ?? 'black'}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 				d='M16.643 5.5h5.322l9.767 6.73l-9.517 30.27h-5.572l4.759-26.795z'
 			></path>
 			<path
-				fill='black'
-				stroke='black'
+				fill={props.fill ?? 'black'}
+				stroke={props.fill ?? 'black'}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 				d='M27.786 5.5h5.322l9.392 5.916L33.358 42.5h-5.572l3.946-30.27z'
