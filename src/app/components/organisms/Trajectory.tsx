@@ -39,7 +39,7 @@ export const Trajectory = () => {
 						</Typography>
 						<Typography display='inline-block'> - Freelance (2023)</Typography>
 						<Typography mt={2}>
-							En este proyecto desarrollé una página web en equipo para una
+							En este proyecto se desarrolló una página web en equipo para una
 							perfumería en la que apliqué conocimientos de diseño y desarrollo
 							web como creación de componentes, maquetación, estilos,
 							animaciones y responsive design. Así mismo se implementó una base
@@ -64,7 +64,7 @@ export const Trajectory = () => {
 						</Typography>
 						<Typography display='inline-block'> - Freelance (2023)</Typography>
 						<Typography mt={2}>
-							Se dearrollo una web en equipo para un sistema de encuestas donde
+							Se dearrolló una web en equipo para un sistema de encuestas donde
 							se aplicaron mis conocimientos de consumo de APIs, manejo de
 							datos, autenticación de usuarios, manjeo de rutas, diseño y
 							desarrollo web. Se implementó una base de datos para el manejo de

@@ -2,6 +2,7 @@
 import { Box, PaletteOptions } from '@mui/material';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { CustomLink, ToggleTheme } from '../atoms';
+import { usePathname } from 'next/navigation';
 
 interface NavbarProps {
 	setPalette: Dispatch<SetStateAction<PaletteOptions>>;
@@ -9,6 +10,8 @@ interface NavbarProps {
 
 export const Navbar = ({ setPalette }: NavbarProps) => {
 	const [scrolled, setScrolled] = useState(false);
+	const pathname = usePathname();
+	const isHome = pathname === '/';
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -40,9 +43,12 @@ export const Navbar = ({ setPalette }: NavbarProps) => {
 				color={scrolled ? 'navbar.dark' : 'navbar.main'}
 			>
 				<Box display={{ xs: 'none', md: 'flex' }} gap={3} alignItems='center'>
-					<CustomLink href='#home' text='Home' />
-					<CustomLink href='#about' text='Sobre mí' />
-					<CustomLink href='#contact' text='Contacto' />
+					<CustomLink href={isHome ? '#home' : '/#home'} text='Home' />
+					<CustomLink href={isHome ? '#about' : '/#about'} text='Sobre mí' />
+					<CustomLink
+						href={isHome ? '#contact' : '/#contact'}
+						text='Contacto'
+					/>
 				</Box>
 				<ToggleTheme setPalette={setPalette} />
 			</Box>

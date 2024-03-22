@@ -7,7 +7,7 @@ interface ProjectCardProps {
 	image: StaticImageData;
 	title: string;
 	description: string;
-	link?: string;
+	link: string;
 }
 
 export const ProjectCard = ({
@@ -29,37 +29,20 @@ export const ProjectCard = ({
 		height: { xs: '100px', md: 0 },
 	};
 
-	if (link) {
-		return (
-			<Link href={link} rel='noopener noreferrer' target='_blank'>
-				<Box sx={cardStyle} className={styles.card}>
-					<Image
-						src={image}
-						alt='project'
-						priority
-						style={{ width: '100%', height: '100%' }}
-					/>
-					<Box sx={contentStyle} className={styles.content}>
-						<Typography variant='body2'>{title}</Typography>
-						<Typography>{description}</Typography>
-					</Box>
-				</Box>
-			</Link>
-		);
-	}
-
 	return (
-		<Box sx={cardStyle} className={styles.card}>
-			<Image
-				src={image}
-				alt='project'
-				priority
-				style={{ width: '100%', height: '100%' }}
-			/>
-			<Box sx={contentStyle} className={styles.content}>
-				<Typography variant='body2'>{title}</Typography>
-				<Typography>{description}</Typography>
+		<Link href={link}>
+			<Box sx={cardStyle} className={styles.card}>
+				<Image
+					src={image}
+					alt='project'
+					priority
+					style={{ width: '100%', height: '100%' }}
+				/>
+				<Box sx={contentStyle} className={styles.content}>
+					<Typography variant='body2'>{title}</Typography>
+					<Typography>{description}</Typography>
+				</Box>
 			</Box>
-		</Box>
+		</Link>
 	);
 };
