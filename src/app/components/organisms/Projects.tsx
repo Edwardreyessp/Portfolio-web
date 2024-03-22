@@ -25,7 +25,7 @@ export const Projects = () => {
 							image={AxoloteWeb}
 							title={'Axolote Web'}
 							description={'Crea tu página web con este equipo de Axolotes'}
-							link='https://axolote-web.com'
+							link='/landing/1'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -33,6 +33,7 @@ export const Projects = () => {
 							image={AppPerro}
 							title={'AppPerro'}
 							description={'Aplicación para cuidar a tu perro :D'}
+							link='/landing/3'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -40,6 +41,7 @@ export const Projects = () => {
 							image={Fiorel}
 							title={'Fiorel'}
 							description={'Encuentra tu perfume ideal'}
+							link='/landing/2'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -47,6 +49,7 @@ export const Projects = () => {
 							image={DinoApp}
 							title={'Dino App'}
 							description={'Gestiona a tus alumnos para que aprendan a leer'}
+							link='/landing/4'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -54,6 +57,7 @@ export const Projects = () => {
 							image={DinoGame}
 							title={'Dino Game'}
 							description={'Divertido juego para aprender a leer :D'}
+							link='/landing/5'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -61,7 +65,7 @@ export const Projects = () => {
 							image={AxoloteWeb}
 							title={'Axolote Web'}
 							description={'Crea tu página web con este equipo de Axolotes'}
-							link='https://axolote-web.com'
+							link='/landing/1'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -69,6 +73,7 @@ export const Projects = () => {
 							image={AppPerro}
 							title={'AppPerro'}
 							description={'Aplicación para cuidar a tu perro :D'}
+							link='/landing/3'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -76,6 +81,7 @@ export const Projects = () => {
 							image={Fiorel}
 							title={'Fiorel'}
 							description={'Encuentra tu perfume ideal'}
+							link='/landing/2'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -83,6 +89,7 @@ export const Projects = () => {
 							image={DinoApp}
 							title={'Dino App'}
 							description={'Gestiona a tus alumnos para que aprendan a leer'}
+							link='/landing/4'
 						/>
 					</div>
 					<div className={styles.slide}>
@@ -90,6 +97,7 @@ export const Projects = () => {
 							image={DinoGame}
 							title={'Dino Game'}
 							description={'Divertido juego para aprender a leer :D'}
+							link='/landing/5'
 						/>
 					</div>
 				</div>
