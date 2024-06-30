@@ -12,6 +12,10 @@ import {
 	IconCsharp,
 	IconFlask,
 	IconTensorflow,
+	IconTailwindcss,
+	IconPrisma,
+	IconPostgresql,
+	IconShadcn,
 } from '../molecules';
 
 export interface Project {
@@ -235,6 +239,48 @@ export const projects: Project[] = [
 			<IconTensorflow key={4} width={'1.5rem'} />,
 			<IconFirebase key={5} width={'1.5rem'} />,
 			<IconFigma key={6} width={'1.5rem'} />,
+		],
+	},
+	{
+		id: '6',
+		name: 'Gallery App',
+		subtitle: 'Galería de imágenes con Prisma y PostgreSQL',
+		image: '/images/GalleryApp.png',
+		href: 'https://dynamic-gallery-edwardreyessp.vercel.app',
+		background: '#020715',
+		description:
+			'Gallery App es una aplicación que te permite crear una galería de imágenes con Prisma y PostgreSQL. Se basa en el principio de búsqueda de imágenes por etiquetas y categorías. Además, hace uso de rutas paralelas en la visualización de las imágenes (Paralle route de Next.js).',
+		aporte: [
+			'Creación del diseño desde cero en Figma',
+			'Creación de aplicación con Next.js, Tailwind CSS y Shadcn',
+			'Internacionalización de la aplicación (inglés y español)',
+			'Implementación de tema oscuro y claro',
+			'Creación del back-end con Prisma y PostgreSQL',
+			'Búsqueda de imágenes por etiquetas y categorías',
+			'Uso de rutas paralelas para visualización de imágenes',
+			'Búsqueda indexada para optimización de la búsqueda de imágenes',
+		],
+		images: [
+			'/images/galleryapp/img1.png',
+			'/images/galleryapp/img2.png',
+			'/images/galleryapp/img3.png',
+			'/images/galleryapp/img4.png',
+			'/images/galleryapp/img5.png',
+			'/images/galleryapp/img6.png',
+		],
+		challenges: [
+			'Crear una aplicación atractiva y funcional',
+			'Hacer una aplicación internacionalizada mayormente del lado del servidor',
+			'Uso de peticiones fetch controladas para ahorro de consumo de consultas de datos',
+		],
+		technologies: [
+			<IconTailwindcss key={1} width={'1.5rem'} />,
+			<IconNextjs key={1} width={'1.5rem'} />,
+			<IconTypescript key={2} width={'1.5rem'} />,
+			<IconPrisma key={3} width={'1.5rem'} />,
+			<IconPostgresql key={4} width={'1.5rem'} />,
+			<IconShadcn key={5} width={'1.5rem'} />,
+			<IconFigma key={5} width={'1.5rem'} />,
 		],
 	},
 ];
