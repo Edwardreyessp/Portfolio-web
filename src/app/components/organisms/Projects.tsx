@@ -6,6 +6,7 @@ import AxoloteWeb from '../../../../public/images/AxoloteWeb.png';
 import DinoApp from '../../../../public/images/DinoApp.png';
 import DinoGame from '../../../../public/images/DinoGame.png';
 import Fiorel from '../../../../public/images/Fiorel.png';
+import GalleryApp from '../../../../public/images/GalleryApp.png';
 
 export const Projects = () => {
 	return (
@@ -62,6 +63,14 @@ export const Projects = () => {
 					</div>
 					<div className={styles.slide}>
 						<ProjectCard
+							image={GalleryApp}
+							title={'Gallery App'}
+							description={'Galería de imágenes con Prisma y PostgreSQL'}
+							link='/landing/6'
+						/>
+					</div>
+					<div className={styles.slide}>
+						<ProjectCard
 							image={AxoloteWeb}
 							title={'Axolote Web'}
 							description={'Crea tu página web con este equipo de Axolotes'}
@@ -98,6 +107,14 @@ export const Projects = () => {
 							title={'Dino Game'}
 							description={'Divertido juego para aprender a leer :D'}
 							link='/landing/5'
+						/>
+					</div>
+					<div className={styles.slide}>
+						<ProjectCard
+							image={GalleryApp}
+							title={'Gallery App'}
+							description={'Galería de imágenes con Prisma y PostgreSQL'}
+							link='/landing/6'
 						/>
 					</div>
 				</div>
